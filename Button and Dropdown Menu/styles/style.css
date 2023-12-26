@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  --color-primary: #052659;
+  --color-secondary: #7DA0CA;
+  --light: white;
+  --dark: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.dropdown {
+  display: grid;
+}
+
+.dropdown-btn {
+  color: var(--light);
+  background-color: var(--color-primary);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 5px var(--dark);
+  text-transform: uppercase;
+}
+
+.dropdown-btn:hover {
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 2px var(--dark);
+  transform: scale(0.9);
+}
+
+.menu-options {
+  visibility: hidden;
+  top: -100%;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.3rem;
+  transition: all 0.2s ease-out;
+}
+
+.menu-options li {
+  background-color: var(--color-secondary);
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-primary);
+  transition: background-color 0.3s ease out;
+  border-left: 3px solid var(--color-primary);
+}
+
+.menu-options li:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-primary);
+  box-shadow: 2px 2px 5px var(--dark);
+  transform: scale(1.1);
+}
+
+.menu-options li a{
+  color: var(--light);
+  letter-spacing: 0.1rem;
+}
+
+.menu-options li:first-child{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.menu-options li:last-child{
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px
+}
+
+.show {
+  visibility: visible;
+}
