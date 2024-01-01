@@ -9,5 +9,5 @@ CodePen link: https://codepen.io/rittickdatta/pen/abMzwbM
 Menu Button and Dropdown Menu
 CodePen link: https://codepen.io/rittickdatta/pen/ZEPYrva
 
-Grid Painting - Shapes, Colors, and Sizes
+Grid Painting 
 CodePen link: https://codepen.io/rittickdatta/pen/wvOKdaO
