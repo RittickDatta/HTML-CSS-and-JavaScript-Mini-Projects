@@ -7,7 +7,7 @@
     --dark-color: #021024;
     --semi-dark-color: #052659;
     --light-color: #5483B3;
-    --red-hightlight: red;
+    --green-hightlight: rgb(24, 180, 24);
     
     /* FONT STYLE */
     --primary-font: "Cinzel Decorative", serif;
@@ -42,6 +42,7 @@ html, body {
     height: 100vh;
     background-color: var(--background-color);
     font-family: var(--secondary-font);
+    overflow-x: hidden;
 }
 
 li {
@@ -50,6 +51,31 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.showSummary{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 118px;
+    height: 55px;
+    padding: 2px 4px;
+    z-index: 2;
+    color: var(--background-color);
+    background-color: var(--green-hightlight);
+    border: none;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 10px;
+}
+
+.showSummary:hover {
+    cursor: pointer;
 }
 
 /* Navigation */
@@ -126,19 +152,18 @@ nav {
 
 main {
     position: absolute;
-    right: 35px;
-    width: 70%;
+    width: 100%;
     background-color: var(--background-color);
     section {
         width: 100%;
         height: auto;
-        margin: var(--spacing-large);
         background-color: var(--modal-background-color);
         padding: var(--spacing-large);
     }
 
     section#top{
-        background-color: #5483B3
+        background-color: #5483B3;
+        height: 65vh
     };
 
     .top-fold-text {
@@ -151,6 +176,7 @@ main {
 
 aside {
     position: absolute;
+    left: -27%;
     width: var(--aside-width);
     height: 100vh;
     display: flex;
@@ -158,6 +184,7 @@ aside {
     background-color: var(--semi-dark-color);
     color: var(--light-color);
     padding: var(--spacing-large);
+    transition: 0.7s;
 
     img{
         margin: 0 auto;
@@ -168,7 +195,7 @@ aside {
     }
 
     .highlight {
-        color: var(--red-hightlight);
+        color: var(--green-hightlight);
         font-size: var(--spacing-large);
         margin-top: var(--spacing-medium);
     }
@@ -187,4 +214,8 @@ aside {
         color: var(--modal-background-color);
         font-size: var(--body-text);
     }
+}
+
+.showHideAside {
+    left: 0;
 }
