@@ -20,12 +20,14 @@
     --sub-heading: 2rem;
     --title: 1.5rem;
     --body-text: 1rem;
+    --skill-detail: 1.5rem;
 
     /* SPACING */
     --spacing-top-bottom: 5px;
     --spacing-left-right: 10px;
     --spacing-medium: 15px;
     --spacing-large: 20px;
+    --little-padding: 8px;
 
     /* SECTION SIZING */
     --nav-height: 80px;
@@ -182,6 +184,8 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     section#top{
@@ -248,6 +252,102 @@ aside {
     left: 0;
 }
 
+/* SKILLS */
+
+.skill-content {
+    display: flex;
+
+    .frontend {
+        width: 70%;
+    }
+
+    .backend {
+        width: 30%;
+    }
+
+    .frontend-title,
+    .backend-title {
+        font-size: var(--heading);
+    }
+}
+
+/* SKILL SECTION */
+
+.skill-container {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 3rem;
+margin-top: 3rem;
+}
+
+.skill-card {
+    width: 240px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px black;
+    background-color: var(--modal-background-color);
+    color: var(--dark-color);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-medium);
+    position: relative;
+    background-color: var(--semi-dark-color);
+    margin-right: 100px;
+}
+
+.skill-card-secondary {
+    width: 200px;
+    height: 80px;
+    .skill-title {
+        font-size: var(--title);
+
+    }
+}
+
+.skill-card-tertiary {
+    width: 160px;
+    height: 60px;
+    background-color: var(--light-color);
+    .skill-title {
+        font-size: var(--title);
+    }
+}
+
+.skill-title {
+    font-size: var(--sub-heading);
+    font-weight: bold;
+    color: var(--background-color);
+    letter-spacing: 0.5px;
+}
+
+.skill-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skill-experience {
+    background-color: var(--dark-color);
+    color: var(--background-color);
+    padding: var(--little-padding);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.skill-recently-used {
+    background-color: var(--dark-color);
+    color: var(--background-color);
+    padding: var(--little-padding);
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+
+
+
 
 /* MEDIA QUERIES */
 
@@ -282,6 +382,16 @@ aside {
         visibility: hidden;
     }
 
+    /* SKILLS */
+
+    .skill-content{
+        flex-direction: column;
+    }
+
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media ((min-width: 1000px) and (max-width: 1200px)) {
