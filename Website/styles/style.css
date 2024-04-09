@@ -208,13 +208,13 @@ main {
 }
 
 aside {
-    position: absolute;
+    position: fixed;
     left: -32%;
     width: var(--aside-width);
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--semi-dark-color);
+    background-color: #1950a5;
     color: var(--light-color);
     padding: var(--spacing-large);
     transition: 0.7s;
@@ -253,6 +253,45 @@ aside {
     left: 0;
 }
 
+/* PITCH */
+.intro {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    background-color: var(--semi-dark-color);
+    color: var(--background-color);
+}
+.pitch {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.pitch-block {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--background-color);
+    padding: var(--large-padding);
+    border-radius: 5px;
+    box-shadow: 5px 0px 10px var(--light-color);
+}
+.pitch-title {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid white;
+}
+.pitch-sub-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #71b7ff;
+    width: 100%;
+    text-align: left;
+}
+.pitch-content {
+
+}
+
 /* SKILLS */
 
 .frontend,
@@ -277,9 +316,11 @@ aside {
 
     .frontend-title,
     .backend-title {
+        text-align: left;
         font-size: var(--heading);
         font-weight: 700;
         text-transform: uppercase;
+        letter-spacing: 3px;
     }
 }
 
@@ -396,6 +437,16 @@ margin-top: 3rem;
 
     .footer-nav {
         visibility: hidden;
+    }
+
+    /* PITCH */
+
+    .intro{
+        height: auto;
+    }
+    .pitch {
+        display: flex;
+        flex-direction: column;
     }
 
     /* SKILLS */
