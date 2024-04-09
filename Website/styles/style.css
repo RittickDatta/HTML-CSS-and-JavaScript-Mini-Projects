@@ -27,7 +27,9 @@
     --spacing-left-right: 10px;
     --spacing-medium: 15px;
     --spacing-large: 20px;
-    --little-padding: 8px;
+    --little-padding: 4px;
+    --padding-medium: 8px;
+    --large-padding: 2rem;
 
     /* SECTION SIZING */
     --nav-height: 80px;
@@ -177,7 +179,6 @@ main {
     width: 100%;
     background-color: var(--background-color);
     section {
-        width: 100%;
         height: auto;
         background-color: var(--modal-background-color);
         padding: var(--spacing-large);
@@ -254,6 +255,15 @@ aside {
 
 /* SKILLS */
 
+.frontend,
+.backend {
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--semi-dark-color);
+    padding: var(--large-padding);
+    margin: var(--spacing-large);
+}
+
 .skill-content {
     display: flex;
 
@@ -268,6 +278,8 @@ aside {
     .frontend-title,
     .backend-title {
         font-size: var(--heading);
+        font-weight: 700;
+        text-transform: uppercase;
     }
 }
 
@@ -275,7 +287,7 @@ aside {
 
 .skill-container {
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr;
 grid-gap: 3rem;
 margin-top: 3rem;
 }
@@ -328,24 +340,28 @@ margin-top: 3rem;
 }
 
 .skill-experience {
+    border-radius: 10px;
     background-color: var(--dark-color);
     color: var(--background-color);
-    padding: var(--little-padding);
+    padding: var(--padding-medium);
     position: absolute;
     top: -10px;
     right: -10px;
+    display: none;
+    transition: all 1s cubic-bezier();
 }
 
 .skill-recently-used {
+    border-radius: 10px;
     background-color: var(--dark-color);
     color: var(--background-color);
-    padding: var(--little-padding);
+    padding: var(--padding-medium);
     position: absolute;
     bottom: -10px;
     right: -10px;
+    display: none;
+    transition: all 1s ease-in-out;
 }
-
-
 
 
 
@@ -384,13 +400,21 @@ margin-top: 3rem;
 
     /* SKILLS */
 
-    .skill-content{
-        flex-direction: column;
-    }
-
     .skill-container {
         display: flex;
         flex-direction: column;
+    }
+
+    .skill-content {
+        display: flex;
+        flex-direction: column;
+        .frontend {
+            width: 70%;
+        }
+    
+        .backend {
+            width: 70%;
+        }
     }
 }
 
@@ -400,5 +424,17 @@ margin-top: 3rem;
         font-weight: bold;
         width: 50%;
         color: var(--background-color);
+    }
+
+    .skill-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .frontend,
+    .backend {
+        width: 100%;
     }
 }
