@@ -404,7 +404,77 @@ margin-top: 3rem;
     transition: all 1s ease-in-out;
 }
 
+/* EXPERIENCE */
 
+.experience {
+    width: 100%;
+    height: 77vh;
+    background-color: var(--semi-dark-color);
+}
+
+.domains {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--background-color);
+    display: flex;
+    justify-content: space-around;
+}
+
+.domain-details{
+    margin-top: 0.3rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 25% 75%;
+}
+
+.domain-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 2rem;
+}
+
+.domain-item{
+    font-size: var(--skill-detail);
+    color: var(--background-color);
+    border: 1px solid var(--light-color);
+    width: -webkit-fill-available;
+    padding: var(--large-padding);
+    border-radius: 4px;
+    margin-top: 5px;
+    box-shadow: 3px 0px 13px var(--green-hightlight);
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.domain-item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0;
+    color: var(--light-color);
+    background-color: var(--background-color);
+
+}
+
+.domain-item-deatils-block {
+    height: 95%;
+    display: grid;
+    place-items: center;
+}
+
+.domain-item-details {
+    display: none;
+    font-size: var(--large-padding);
+    padding: var(--large);
+    color: var(--background-color);
+    transition: all 0.5 ease-out;
+}
+
+.showDetail {
+    display: block;
+    height: 90%;
+}
 
 /* MEDIA QUERIES */
 
@@ -466,6 +536,22 @@ margin-top: 3rem;
         .backend {
             width: 70%;
         }
+    }
+
+    .domains{
+        font-size: 4rem;
+    }
+
+    .domain-item-deatils-block {
+        display: none;
+    }
+
+    .domain-details{
+        margin-top: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        width: 100%;
     }
 }
 

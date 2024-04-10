@@ -27,3 +27,15 @@ for (let i = 0; i < skillCards.length; i++) {
     recentlyUsed[i].style.display = "none";
   });
 }
+
+const navItems = document.querySelectorAll(".domain-item");
+const domainTabs = document.querySelectorAll(".domain-item-details");
+
+for (let i = 0; i < navItems.length; i++) {
+  const tab = domainTabs[i];
+  tab.classList.remove("showDetail");
+  navItems[i].addEventListener("mouseover", () => {
+    domainTabs.forEach((item) => item.classList.remove("showDetail"));
+    tab.classList.add("showDetail");
+  });
+}
